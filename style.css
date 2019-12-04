@@ -1,0 +1,31 @@
+.title {
+    font-family: Tahoma;
+    text-shadow: 2px 2px lightgrey;
+}
+.h1 {
+    font-family: Tahoma;
+}
+.h2 {
+    font-family: Tahoma;
+}
+.h3 {
+    font-family: Tahoma;
+}
+.h4 {
+    font-family: Tahoma;
+}
+.h5 {
+    font-family: Tahoma;
+}
+.h6 {
+    font-family: Tahoma;
+}
+.p {
+    font-family: Tahoma;
+    font-size: 12px;
+}
+.copyright {
+    font-family: Tahoma;
+    margin-bottom: -22px;
+    font-size: 10px;
+}
