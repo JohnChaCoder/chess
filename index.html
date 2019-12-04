@@ -15,11 +15,29 @@
 <body>
     <h1 class="title">This space is a work-in-progress.</h1>
     <p></p>
+    <div id="chessboard">
+        
+    </div>
     <p></p>
-
     <p></p>
     <p></p>
     <script>
+    var sqrSize = 30
+    var height = 1042
+    var width = 2048
+
+    function createBoard() {
+        for (let y = 0; y <= height; y += sqrSize) {
+            for (let x = 0; x <= height; x += sqrSize) {
+                color rect(x,y,sqrSize,sqrSize)
+            }
+        } 
+    }
+
+    function displayBoard() {
+        let chessboard = document.createElement(createBoard)
+        chessboard.innerHTML = chessboard
+    }
     </script>
     <p></p>
     <p></p>
