@@ -16,20 +16,15 @@
     <h1 class="title">This space is a work-in-progress.</h1>
     <p></p>
     <canvas id="chessboard" width="500" height="500" style="border:1px solid #000000;">
-            var sqrSize = 30
-            var height = 1042
-            var width = 2048
-        
-                for (let y = 0; y <= height; y += sqrSize) {
-                    for (let x = 0; x <= height; x += sqrSize) {
-                        c.fill rect(x,y,sqrSize,sqrSize)
-                    }
-                } 
+
     </canvas>
     <p></p>
     <p></p>
     <p></p>
     <script>
+
+    var board = document.getElementById("chessboard").getContext("2d")
+
     var sqrSize = 30
     var height = 1042
     var width = 2048
@@ -37,7 +32,7 @@
     function createBoard() {
         for (let y = 0; y <= height; y += sqrSize) {
             for (let x = 0; x <= height; x += sqrSize) {
-                color; rect(x,y,sqrSize,sqrSize)
+                board.fillRect(x, y, sqrSize, sqrSize);            
             }
         } 
     }
