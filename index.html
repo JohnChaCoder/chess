@@ -15,9 +15,17 @@
 <body>
     <h1 class="title">This space is a work-in-progress.</h1>
     <p></p>
-    <div id="chessboard">
+    <canvas id="chessboard" width="500" height="500" style="border:1px solid #000000;">
+            var sqrSize = 30
+            var height = 1042
+            var width = 2048
         
-    </div>
+                for (let y = 0; y <= height; y += sqrSize) {
+                    for (let x = 0; x <= height; x += sqrSize) {
+                        c.fill rect(x,y,sqrSize,sqrSize)
+                    }
+                } 
+    </canvas>
     <p></p>
     <p></p>
     <p></p>
@@ -29,7 +37,7 @@
     function createBoard() {
         for (let y = 0; y <= height; y += sqrSize) {
             for (let x = 0; x <= height; x += sqrSize) {
-                color rect(x,y,sqrSize,sqrSize)
+                color; rect(x,y,sqrSize,sqrSize)
             }
         } 
     }
@@ -43,6 +51,6 @@
     <p></p>
     <p></p>
     <p></p>
-    <h5 class="copyright">Version v0.0.0 Pre-Alpha<br>© 2019. All rights reserved.<br><br>Code powered by JavaScript<br>Some of the features of this site may not work in all versions of Internet Explorer.</h5>
+    <h5 class="copyright">Version v0.0.0 Pre-Alpha<br>© 2019. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in all versions of Internet Explorer.</h5>
 </body>
 </html>
