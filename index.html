@@ -16,35 +16,48 @@
     <h1 class="title">This space is a work-in-progress.</h1>
     <p></p>
     <canvas id="chessboard" width="500" height="500" style="border:1px solid #000000;">
-
+    <!-- Output an error message for older web browsers that does not support HTML5 -->
+    ERROR: Your browser does not support the HTML5 canvas tag.
     </canvas>
     <p></p>
+
+    <!--
+    <img id="test" src="assets/favicon.png" alt="TEST PICTURE">
+    <canvas id="PICTEST">
+    <- Output an error message for older web browsers that does not support HTML5 ->
+    ERROR: Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    -->
+
     <p></p>
     <p></p>
     <script>
 
-    var board = document.getElementById("chessboard").getContext("2d")
-    var sqrSize = 30
-    var height = 55
-    var width = 55
+    // Builds the chessboard
+    var board = document.getElementById("chessboard").getContext("2d");
+    var sqrSize = 62.5;
+    var height = 500;   // has to match with the <canvas> tag for height
+    var width = 500;    // has to match with the <canvas> tag for width
+    var sqCount = 0;
 
-//    function createBoard() {
-        for (let y = 0; y <= height; y += sqrSize) {
-            for (let x = 0; x <= height; x += sqrSize) {
-                board.fillRect(x, y, sqrSize, sqrSize);            
+    for (let y = 0; y <= height; y += sqrSize) {
+        for (let x = 0; x <= height; x += sqrSize) {
+            if(sqCount % 2 == 0) {
+                board.fillStyle = "#000000";
+            } else {
+                board.fillStyle = "#FFFFFF";
             }
+            board.fillRect(x, y, sqrSize, sqrSize);
+            sqCount++
         }
-        for (let y = 22; y <= height; y += sqrSize) {
-            for (let x = 22; x <= height; x += sqrSize) {
-                board.fillRect(x, y, sqrSize, sqrSize);            
-            }
-        } 
-//    }
+    }
 
-//    function displayBoard() {
-//        let chessboard = document.createElement(createBoard)
-//        chessboard.innerHTML = chessboard
-//    }
+    window.onload = function() {
+        var canvas = document.getElementById("test");
+        var ctx = canvas.getContext("2d");
+        var img = document.getElementById("test");
+        ctx.drawImage(img, 10, 10);
+    };
     </script>
     <p></p>
     <p></p>
