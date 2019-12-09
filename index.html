@@ -1,3 +1,14 @@
+<!--
+// ==============================================================================================================
+// A chessboard written in combination of HTML5 and JavaScript
+//
+// Source code created by JohnChaCoder and PH03N1X015
+//
+// Started on Wednesday December 2, 2019
+//
+// Created and edited using Visual Studio Code. © 2019 Microsoft Corporation. All rights reserved.
+// ==============================================================================================================
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +30,9 @@
     <!-- Output an error message for older web browsers that does not support HTML5 -->
     ERROR: Your browser does not support the HTML5 canvas tag.
     </canvas>
-    <p></p>
+    <p>Click to roll a dice.</p>
+    <button onclick="rnumgen()">Try it</button>
+    <p id="demo"></p>
 
     <!--
     <img id="test" src="assets/favicon.png" alt="TEST PICTURE">
@@ -28,6 +41,25 @@
     ERROR: Your browser does not support the HTML5 canvas tag.
     </canvas>
     -->
+
+    <script>
+    // a random number genrator
+
+    function rnumgen() {
+        var numgen = `The roll is: ${Math.floor((Math.random() * 6) + 1)}`;
+        document.getElementById("demo").innerHTML = numgen;
+    }
+
+
+
+
+
+
+
+
+
+
+    </script>
 
     <p></p>
     <p></p>
@@ -52,49 +84,51 @@
         }
     }
 
-    window.onload = function() {
-        var canvas = document.getElementById("test");
-        var ctx = canvas.getContext("2d");
-        var img = document.getElementById("test");
-        ctx.drawImage(img, 10, 10);
-    };
+    //window.onload = function() {
+    //    var canvas = document.getElementById("test");
+    //    var ctx = canvas.getContext("2d");
+    //    var img = document.getElementById("test");
+    //    ctx.drawImage(img, 10, 10);
+    //};
     var board2 = Chessboard('board2', {
         draggable: true,
         dropOffBoard: 'trash',
         sparePieces: true
     })
-    var rook = [0,7,56,63];
-var knight = [1,6,57,62];
-var bishop = [2,5,58,61];
-var king = [3,59];
-var queen = [4,60]
-var pawn = [8,9,10,11,12,13,14,15,48,49,50,51,52,53,54,55];
+    
+    var rook    = [0,7,56,63];
+    var knight  = [1,6,57,62];
+    var bishop  = [2,5,58,61];
+    var king    = [3,59];
+    var queen   = [4,60];
+    var pawn    = [8,9,10,11,12,13,14,15,48,49,50,51,52,53,54,55];
 
-for (let i=0; i< 64; i++){
-    var div = document.createElement("div");
-    document.getElementById("ChessBoard").
-    appendChild(div).
-    style.backgroundColor = parseInt((i / 8) + i) % 2 == 0 ? 'white' : 'black';    
-    div.innerHTML = i;
-    if(rook.indexOf(i) !== -1){
-        div.innerHTML = 'r';
+    // TODO: make this work
+    for (let i=0; i< 64; i++){
+        var div = document.createElement("div");
+        document.getElementById("ChessBoard").getContext("2d");
+        //appendChild(div).
+        style.backgroundColor = parseInt((i / 8) + i) % 2 == 0 ? 'white' : 'black';    
+        div.innerHTML = i;
+        if(rook.indexOf(i) !== -1){
+            div.innerHTML = 'r';
+        }
+        if(knight.indexOf(i) !== -1){
+            div.innerHTML = 'n';
+        }
+        if(bishop.indexOf(i) !== -1){
+            div.innerHTML = 'b';
+        }
+        if(king.indexOf(i) !== -1){
+            div.innerHTML = 'k';
+        }
+        if(queen.indexOf(i) !== -1){
+            div.innerHTML = 'q';
+        }
+        if(pawn.indexOf(i) !== -1){
+            div.innerHTML = 'p';
+        }
     }
-    if(knight.indexOf(i) !== -1){
-        div.innerHTML = 'n';
-    }
-    if(bishop.indexOf(i) !== -1){
-        div.innerHTML = 'b';
-    }
-    if(king.indexOf(i) !== -1){
-        div.innerHTML = 'k';
-    }
-    if(queen.indexOf(i) !== -1){
-        div.innerHTML = 'q';
-    }
-    if(pawn.indexOf(i) !== -1){
-        div.innerHTML = 'p';
-    }
-}
     </script>
     <p></p>
     <p></p>
