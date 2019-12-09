@@ -26,6 +26,7 @@
 }
 .copyright {
     font-family: Tahoma;
+    text-shadow: 1px 1px lightgrey;
     margin-bottom: -22px;
-    font-size: 10px;
+    font-size: 13px;
 }
