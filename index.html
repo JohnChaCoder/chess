@@ -30,10 +30,18 @@
     <!-- Output an error message for older web browsers that does not support HTML5 -->
     ERROR: Your browser does not support the HTML5 canvas tag.
     </canvas>
-    <p>Click to roll a dice.</p>
-    <button onclick="rnumgen()">Try it</button>
-    <p id="demo"></p>
+    <p>Click to roll a dice for 1st player.</p>
+    <button onclick="randoNumGen()">Roll</button>
+    <p id="dice"></p>
 
+    <p>Click to roll a dice for 2nd player.</p>
+    <button onclick="randoNumGen2()">Roll</button>
+    <p id="dice2"></p>
+
+    <!--
+    <button class="otherBtns" onclick="howToPlay()">How to play</button>
+    -->
+    <button class="otherBtns" onclick="about()">About Chess</button>
     <!--
     <img id="test" src="assets/favicon.png" alt="TEST PICTURE">
     <canvas id="PICTEST">
@@ -44,13 +52,22 @@
 
     <script>
     // a random number genrator
-
-    function rnumgen() {
+    function randoNumGen() {
+    //    var getGIF = new Image();
+    //    getGIF.src = 'assets/dice_roll.gif';
+    //    document.body.appendChild(getGIF);
         var numgen = `The roll is: ${Math.floor((Math.random() * 6) + 1)}`;
-        document.getElementById("demo").innerHTML = numgen;
+        document.getElementById("dice").innerHTML = numgen;
     }
 
+    function randoNumGen2() {
+        var numgen = `The roll is: ${Math.floor((Math.random() * 6) + 1)}`;
+        document.getElementById("dice2").innerHTML = numgen;
+    }
 
+    if (null) {
+
+    }
 
 
 
@@ -61,8 +78,10 @@
 
     </script>
 
+    <!--
     <p></p>
     <p></p>
+    -->
     <script>
 
     // Builds the chessboard to HTML5 element
@@ -90,11 +109,13 @@
     //    var img = document.getElementById("test");
     //    ctx.drawImage(img, 10, 10);
     //};
-    var board2 = Chessboard('board2', {
-        draggable: true,
-        dropOffBoard: 'trash',
-        sparePieces: true
-    })
+
+    // unused/dead code
+    //var board2 = Chessboard('board2', {
+    //    draggable: true,
+    //    dropOffBoard: 'trash',
+    //    sparePieces: true
+    //})
     
     var rook    = [0,7,56,63];
     var knight  = [1,6,57,62];
@@ -104,10 +125,11 @@
     var pawn    = [8,9,10,11,12,13,14,15,48,49,50,51,52,53,54,55];
 
     // TODO: make this work
-    for (let i=0; i< 64; i++){
+    for (let i = 0; i < 64; i++) {
         var div = document.createElement("div");
-        document.getElementById("ChessBoard").getContext("2d");
-        //appendChild(div).
+        document.getElementById("ChessBoard")
+        canvas.getContext("2d");
+        appendChild(div);
         style.backgroundColor = parseInt((i / 8) + i) % 2 == 0 ? 'white' : 'black';    
         div.innerHTML = i;
         if(rook.indexOf(i) !== -1){
@@ -132,12 +154,19 @@
     </script>
     <p></p>
     <p></p>
+    <script>
+    // Shows the info of the site
+    function about() {
+        //alert("Chess Titans with a Twist\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.\n\nCreated and edited using Visual Studio Code.\n© 2019 Microsoft Corporation. All rights reserved.")
+        alert("The game of Chess with a Twist\n(Version 0.1.0 Pre-Alpha)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.")
+    }
+    </script>
     <p></p>
     
     <p></p>
     <!--
     <h5 class="copyright">Version v0.0.0 Pre-Alpha<br>© 2019. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in all versions of Internet Explorer.</h5>
     -->
-    <h5 class="copyright">Version v0.0.0 Pre-Alpha<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
+    <h5 class="copyright">Version v0.1.0 Pre-Alpha<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
 </body>
 </html>

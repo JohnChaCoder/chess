@@ -24,6 +24,25 @@ p {
     font-family: Tahoma;
     font-size: 14px;
 }
+button {
+    background-color: lightgray; /* Green */
+    border-color: gray;
+    border-radius: 4px;
+    padding: 5px 20px;
+    outline: none;
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 1px 1px rgb(175, 175, 175);
+}
+button:hover {
+    background-color: rgb(224, 224, 224); /* Green */
+    border-color: rgb(187, 187, 187);
+}
+button:active {
+    background-color: rgb(177, 177, 177); /* Green */
+    border-color: rgb(92, 92, 92);
+}
 .copyright {
     font-family: Tahoma;
     text-shadow: 1px 1px lightgrey;
