@@ -26,6 +26,10 @@
 <body>
     <h1 class="title">This space is a work-in-progress.</h1>
     <p></p>
+    <!--
+    <p id="clock"></p>
+    -->
+    <p></p>
     <canvas id="chessboard" width="500" height="500" style="border:5px solid #000000;">
     <!-- Output an error message for older web browsers that does not support HTML5 -->
     ERROR: Your browser does not support the HTML5 canvas tag.
@@ -51,6 +55,12 @@
     -->
 
     <script>
+    // date and clock (probably redundant)
+    var date = new Date();
+    //document.getElementById("clock").innerHTML = `Welcome! It is ${date.toDateString()}!\nThe time now is ${date.getHours()}:${date.getMinutes()}.`;
+    </script>
+
+    <script>
     // a random number genrator
     function randoNumGen() {
     //    var getGIF = new Image();
@@ -69,7 +79,29 @@
 
     }
 
+    var state = false //false if no piece has been selected
+    var currentPiece;
+    var currentCell;
 
+    var cells = document.getElementsByTagName("chessboard"); 
+    for (var i = 0; i < cells.length; i++) { 
+    cells[i].onclick = function(){
+        getCell(this);
+    };
+    }
+
+    function getCell(that) {
+        if(!state) { //this means if the state is false (i.e. no piece selected
+            state = true; //piece has been selected
+            currentPiece = that.innerHTML; //get the current piece selected
+            currentCell = that; //get the current cell selection
+        }
+        else { //else, you are moving a piece
+            that.innerHTML = currentPiece; //Set the selected space to the piece that was grabbed
+            currentCell.innerHTML = ""; //remove the piece from its old location
+            state = false; //piece has been placed, so set state back to false
+        }
+    }
 
 
 
@@ -94,9 +126,9 @@
     for (let y = 0; y <= height; y += sqrSize) {
         for (let x = 0; x <= height; x += sqrSize) {
             if(sqCount % 2 == 0) {
-                board.fillStyle = "#000000";
+                board.fillStyle = "#777777"; // Black squares
             } else {
-                board.fillStyle = "#FFFFFF";
+                board.fillStyle = "#9e9e9e"; // White squares
             }
             board.fillRect(x, y, sqrSize, sqrSize);
             sqCount++
@@ -165,7 +197,7 @@
     
     <p></p>
     <!--
-    <h5 class="copyright">Version v0.0.0 Pre-Alpha<br>© 2019. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in all versions of Internet Explorer.</h5>
+    <h5 class="copyright">Version v0.0.0 Pre-Alpha<br>© 2019. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
     -->
     <h5 class="copyright">Version v0.1.0 Pre-Alpha<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
 </body>
