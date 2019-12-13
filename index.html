@@ -26,9 +26,7 @@
 <body>
     <h1 class="title">This space is a work-in-progress.</h1>
     <p></p>
-    <!--
     <p id="clock"></p>
-    -->
     <p></p>
     <canvas id="chessboard" width="500" height="500" style="border:5px solid #000000;">
     <!-- Output an error message for older web browsers that does not support HTML5 -->
@@ -57,7 +55,9 @@
     <script>
     // date and clock (probably redundant)
     var date = new Date();
-    //document.getElementById("clock").innerHTML = `Welcome! It is ${date.toDateString()}!\nThe time now is ${date.getHours()}:${date.getMinutes()}.`;
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    document.getElementById("clock").innerHTML = `Welcome! You've entered on ${days[date.getDay()]} ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}!\nThe time now is ${date.getHours()}:${date.getMinutes()}.`;
     </script>
 
     <script>
@@ -199,6 +199,6 @@
     <!--
     <h5 class="copyright">Version v0.0.0 Pre-Alpha<br>© 2019. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
     -->
-    <h5 class="copyright">Version v0.1.0 Pre-Alpha<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
+    <h5 class="copyright">Version v0.1.5 Pre-Alpha<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
 </body>
 </html>
