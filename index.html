@@ -44,13 +44,6 @@
     <button class="otherBtns" onclick="howToPlay()">How to play</button>
     -->
     <button class="otherBtns" onclick="about()">About Chess</button>
-    <!--
-    <img id="test" src="assets/favicon.png" alt="TEST PICTURE">
-    <canvas id="PICTEST">
-    <- Output an error message for older web browsers that does not support HTML5 ->
-    ERROR: Your browser does not support the HTML5 canvas tag.
-    </canvas>
-    -->
 
     <script>
     // date and clock (probably redundant)
@@ -63,9 +56,6 @@
     <script>
     // a random number genrator
     function randoNumGen() {
-    //    var getGIF = new Image();
-    //    getGIF.src = 'assets/dice_roll.gif';
-    //    document.body.appendChild(getGIF);
         var numgen = `The roll is: ${Math.floor((Math.random() * 6) + 1)}`;
         document.getElementById("dice").innerHTML = numgen;
     }
@@ -110,10 +100,6 @@
 
     </script>
 
-    <!--
-    <p></p>
-    <p></p>
-    -->
     <script>
 
     // Builds the chessboard to HTML5 element
@@ -134,20 +120,6 @@
             sqCount++
         }
     }
-
-    //window.onload = function() {
-    //    var canvas = document.getElementById("test");
-    //    var ctx = canvas.getContext("2d");
-    //    var img = document.getElementById("test");
-    //    ctx.drawImage(img, 10, 10);
-    //};
-
-    // unused/dead code
-    //var board2 = Chessboard('board2', {
-    //    draggable: true,
-    //    dropOffBoard: 'trash',
-    //    sparePieces: true
-    //})
     
     var rook    = [0,7,56,63];
     var knight  = [1,6,57,62];
@@ -160,9 +132,8 @@
     for (let i = 0; i < 64; i++) {
         var div = document.createElement("div");
         document.getElementById("ChessBoard")
-        canvas.getContext("2d");
-        appendChild(div);
-        style.backgroundColor = parseInt((i / 8) + i) % 2 == 0 ? 'white' : 'black';    
+        chessboard.getContext("2d");
+        chessboard.style.backgroundColor = parseInt((i / 8) + i) % 2 == 0 ? 'white' : 'black';    
         div.innerHTML = i;
         if(rook.indexOf(i) !== -1){
             div.innerHTML = 'r';
@@ -182,6 +153,7 @@
         if(pawn.indexOf(i) !== -1){
             div.innerHTML = 'p';
         }
+        chessboard.appendChild(div);
     }
     </script>
     <p></p>
