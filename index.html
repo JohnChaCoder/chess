@@ -50,7 +50,7 @@
     var date = new Date();
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    document.getElementById("clock").innerHTML = `Welcome! You've entered on ${days[date.getDay()]} ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}!\nThe time now is ${date.getHours()}:${date.getMinutes()}.`;
+    document.getElementById("clock").innerHTML = `Welcome! You've entered on ${days[date.getDay()]} ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()} at ${date.getHours()}:${date.getMinutes()}!`;
     </script>
 
     <script>
@@ -64,6 +64,9 @@
         var numgen = `The roll is: ${Math.floor((Math.random() * 6) + 1)}`;
         document.getElementById("dice2").innerHTML = numgen;
     }
+    </script>
+
+    <script>
 
     if (null) {
 
@@ -72,12 +75,12 @@
     var state = false //false if no piece has been selected
     var currentPiece;
     var currentCell;
-
     var cells = document.getElementsByTagName("chessboard"); 
+
     for (var i = 0; i < cells.length; i++) { 
-    cells[i].onclick = function(){
-        getCell(this);
-    };
+        cells[i].onclick = function(){
+            getCell(this);
+        }
     }
 
     function getCell(that) {
@@ -131,7 +134,7 @@
     // TODO: make this work
     for (let i = 0; i < 64; i++) {
         var div = document.createElement("div");
-        document.getElementById("ChessBoard")
+        document.getElementById("chessboard")
         chessboard.getContext("2d");
         chessboard.style.backgroundColor = parseInt((i / 8) + i) % 2 == 0 ? 'white' : 'black';    
         div.innerHTML = i;
@@ -159,10 +162,15 @@
     <p></p>
     <p></p>
     <script>
+    // ???
+    function howToPlay() {
+        alert("The game of Chess with an \"only\" Twist - How to Play\n\nThere is no information available.");
+    }
+    
     // Shows the info of the site
     function about() {
         //alert("Chess Titans with a Twist\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.\n\nCreated and edited using Visual Studio Code.\n© 2019 Microsoft Corporation. All rights reserved.")
-        alert("The game of Chess with an \"only\" Twist\n(Version 0.2.0 Pre-Alpha)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.")
+        alert("The game of Chess with an \"only\" Twist\n(Version 0.2.5 Alpha)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.");
     }
     </script>
     <p></p>
@@ -171,6 +179,6 @@
     <!--
     <h5 class="copyright">Version v0.0.0 Pre-Alpha<br>© 2019. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
     -->
-    <h5 class="copyright">Version v0.2.0 Pre-Alpha<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
+    <h5 class="copyright">Version v0.2.5 Alpha<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
 </body>
 </html>
