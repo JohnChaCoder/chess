@@ -24,6 +24,7 @@ p {
     font-family: Tahoma;
     font-size: 14px;
 }
+/* old button styling */
 .button1 {
     background-color: lightgray; /* Green */
     border-color: gray;
@@ -43,6 +44,7 @@ p {
     background-color: rgb(177, 177, 177); /* Green */
     border-color: rgb(92, 92, 92);
 }
+/* Windows Classic Theme (Windows Standard) style buttons */
 button {
     border-color: rgb(225, 225, 225);
     background-color: rgb(212, 208, 200);
