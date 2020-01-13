@@ -68,3 +68,7 @@ button:active {
     margin-bottom: -22px;
     font-size: 13px;
 }
+.imgsize {
+    height: 1.2%;
+    width: 1.2%;
+}
