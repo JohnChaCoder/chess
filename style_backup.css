@@ -2,6 +2,10 @@
 /* The CSS Style sheet (May not work in some older browsers and those that support CSS partially)
 /* ============================================================================================================== */
 
+/* This is used for testing purposes only */
+body {
+    background-color: gray;
+}
 .title {
     font-family: Tahoma;
     text-shadow: 2px 2px lightgrey;
@@ -68,6 +72,7 @@ button:active {
     margin-bottom: -22px;
     font-size: 13px;
 }
+/* This scales the chess pieces to the proper size */
 .imgsize {
     height: 1.2%;
     width: 1.2%;
