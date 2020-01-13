@@ -1,0 +1,74 @@
+/* ============================================================================================================== */
+/* The CSS Style sheet (May not work in some older browsers and those that support CSS partially)
+/* ============================================================================================================== */
+
+.title {
+    font-family: Tahoma;
+    text-shadow: 2px 2px lightgrey;
+}
+.h1 {
+    font-family: Tahoma;
+}
+.h2 {
+    font-family: Tahoma;
+}
+.h3 {
+    font-family: Tahoma;
+}
+.h4 {
+    font-family: Tahoma;
+}
+.h5 {
+    font-family: Tahoma;
+}
+.h6 {
+    font-family: Tahoma;
+}
+p {
+    font-family: Tahoma;
+    font-size: 14px;
+}
+/* old button styling */
+.button1 {
+    background-color: lightgray; /* Green */
+    border-color: gray;
+    border-radius: 4px;
+    padding: 5px 20px;
+    outline: none;
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 1px 1px rgb(175, 175, 175);
+}
+.button1:hover {
+    background-color: rgb(224, 224, 224); /* Green */
+    border-color: rgb(187, 187, 187);
+}
+.button1:active {
+    background-color: rgb(177, 177, 177); /* Green */
+    border-color: rgb(92, 92, 92);
+}
+/* Windows Classic Theme (Windows Standard) style buttons */
+button {
+    border-color: rgb(225, 225, 225);
+    background-color: rgb(212, 208, 200);
+    padding: 3px 14px;
+    outline: none;
+    font-family: Tahoma;
+    font-size: 14px;
+    text-shadow: 1px 1px rgb(175, 175, 175);
+}
+button:active {
+    border-color: rgb(128, 128, 128);
+    background-color: rgb(187, 183, 175);
+}
+.copyright {
+    font-family: Tahoma;
+    text-shadow: 1px 1px lightgrey;
+    margin-bottom: -22px;
+    font-size: 13px;
+}
+.imgsize {
+    height: 1.2%;
+    width: 1.2%;
+}
