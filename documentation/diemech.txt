@@ -1,0 +1,15 @@
+New six-sided die mechanism
+
+Starting the game
+
+- Both players start off by rolling a six-sided die
+	- If you get the the highest number and the opponent gets the lowest number, you will go first
+	- If the opponent gets the the highest number and the you get the lowest number, the opponent goes first
+
+Capturing Pawns* (NEW!)
+
+*An idea suggested for us by Tim
+
+- If you attempt to capture the other player's pawn, it would require both players to roll a six-sided die
+	- If you get the the highest number and the opponent gets the lowest number, you win the capture
+	- If the opponent gets the the highest number and the you get the lowest number, you lose the capture and get sent back to your original position where you've moved before
