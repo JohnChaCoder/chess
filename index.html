@@ -32,6 +32,7 @@
     <img class="imgsize" src = "pawn.png" alt= "Black pawn" id="pawn" class= "player">
     <img class="imgsize" src ="bishop.png" alt= "Black bishop" id="bishop" class= "player">
     -->
+    <!-- One question: You want to define 'player' in CSS, right? That is probably not right here -->
     <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
     <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
     <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
@@ -142,22 +143,20 @@
 
     <script>
 
-    // Builds the chessboard to HTML5 element
-    
-    
-    
+    // This code draws and builds the chessboard to the HTML5 element (canvas)
+
     var board = document.getElementById("chessboard").getContext("2d");
     var sqrSize = 62.5;
-    var height = 500;   // has to match with the <canvas> tag for height
-    var width = 500;    // has to match with the <canvas> tag for width
+    var height = 500;   // has to match with the <canvas> tag for correct height
+    var width = 500;    // has to match with the <canvas> tag for correct width
     var sqCount = 0;
 
     for (let y = 0; y <= height; y += sqrSize) {
         for (let x = 0; x <= height; x += sqrSize) {
             if(sqCount % 2 == 0) {
-                board.fillStyle = "#b96600"; // Black squares
+                board.fillStyle = "#b96600"; // Dark-orange squares
             } else {
-                board.fillStyle = "#ff8c00"; // White squares
+                board.fillStyle = "#ff8c00"; // Orange squares
             }
             board.fillRect(x, y, sqrSize, sqrSize);
             sqCount++
@@ -251,20 +250,20 @@
     <script>
     // Shows how to play chess (INCOMPLETE)
     function howToPlay() {
-        alert("The game of Chess with the \"only\" Twist - How to Play\n\nThere is no information available.");
+        alert("A Chess Game with a Dice mechanic - How to Play\n\nThere is no information available.");
     }
     
     // Shows the info of the site
     function about() {
         //alert("Chess Titans with a Twist\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.\n\nCreated and edited using Visual Studio Code.\n© 2019-2020 Microsoft Corporation. All rights reserved.")
-        alert("The game of Chess with the \"only\" Twist\n(Version 0.3.0 Alpha)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.");
+        alert("A Chess Game with a Dice mechanic\n(Version 0.3.0 Alpha)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.");
     }
     </script>
     <p></p>
     
     <p></p>
     <!--
-    <h5 class="copyright">Version v0.0.0 Pre-Alpha<br>© 2019-2020. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
+    <h5 class="copyright">Version v0.3.0 Alpha<br>© 2019-2020. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
     -->
     <h5 class="copyright">Version v0.3.0 Alpha<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
 </body>
