@@ -4,11 +4,12 @@
 
 /* This is used for testing purposes only */
 body {
-    background-color: gray;
+    background-color: rgb(192, 192, 192);
 }
 .title {
     font-family: Tahoma;
-    text-shadow: 2px 2px lightgrey;
+    color: white;
+    text-shadow: 2px 2px rgb(60, 60, 60);
 }
 .h1 {
     font-family: Tahoma;
@@ -30,7 +31,14 @@ body {
 }
 p {
     font-family: Tahoma;
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px rgb(60, 60, 60);
+}
+/* A drop-shadow for the chessboard */
+canvas {
+    box-shadow: 5px 5px rgb(128, 128, 128);
 }
 /* old button styling */
 .button1 {
@@ -66,14 +74,39 @@ button:active {
     border-color: rgb(128, 128, 128);
     background-color: rgb(187, 183, 175);
 }
+/* Orange buttons */
+.button2 {
+    background-color: darkorange; /* Green */
+    border-color: rgb(185, 102, 0);
+    border-radius: 4px;
+    padding: 4px 15px;
+    color: white;
+    outline: none;
+    font-family: Comic Sans MS;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: 1.5px 1.5px rgb(185, 102, 0);
+  }
+  .button2:hover {
+      background-color: orange; /* Green */
+      border-color: darkorange;
+      text-shadow: 1.5px 1.5px rgb(233, 128, 0);
+  }
+  .button2:active {
+      background-color: rgb(185, 102, 0); /* Green */
+      border-color: rgb(112, 50, 0);
+      text-shadow: 1.5px 1.5px rgb(112, 50, 0);
+  }
+/* Used for the bottom information regarding the version of the site and the rest of the text */
 .copyright {
     font-family: Tahoma;
-    text-shadow: 1px 1px lightgrey;
+    color: white;
+    text-shadow: 1px 1px rgb(60, 60, 60);
     margin-bottom: -22px;
     font-size: 13px;
 }
 /* This scales the chess pieces to the proper size */
 .imgsize {
-    height: 1.2%;
-    width: 1.2%;
+    max-width: 1%;
+    height: auto;
 }
