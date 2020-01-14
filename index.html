@@ -32,22 +32,22 @@
     <img class="imgsize" src = "pawn.png" alt= "Black pawn" id="pawn" class= "player">
     <img class="imgsize" src ="bishop.png" alt= "Black bishop" id="bishop" class= "player">
     -->
-    <img class="imgsize" src = "assets/pawn_new.png" alt= "White pawn" id="pawnw" class= "player">
-    <img class="imgsize" src = "assets/pawn_new.png" alt= "White pawn" id="pawnw" class= "player">
-    <img class="imgsize" src = "assets/pawn_new.png" alt= "White pawn" id="pawnw" class= "player">
-    <img class="imgsize" src = "assets/pawn_new.png" alt= "White pawn" id="pawnw" class= "player">
-    <img class="imgsize" src = "assets/pawn_new.png" alt= "White pawn" id="pawnw" class= "player">
-    <img class="imgsize" src = "assets/pawn_new.png" alt= "White pawn" id="pawnw" class= "player">
-    <img class="imgsize" src = "assets/pawn_new.png" alt= "White pawn" id="pawnw" class= "player">
-    <img class="imgsize" src = "assets/pawn_new.png" alt= "White pawn" id="pawnw" class= "player">
-    <img class="imgsize" src = "assets/rook.png" alt= "White bishop" id="bishopw" class= "player">
-    <img class="imgsize" src = "assets/knight.png" alt= "White bishop" id="bishopw" class= "player">
-    <img class="imgsize" src = "assets/bishop.png" alt= "White bishop" id="bishopw" class= "player">
-    <img class="imgsize" src = "assets/queen.png" alt= "White bishop" id="bishopw" class= "player">
-    <img class="imgsize" src = "assets/king.png" alt= "White bishop" id="bishopw" class= "player">
-    <img class="imgsize" src = "assets/bishop.png" alt= "White bishop" id="bishopw" class= "player">
-    <img class="imgsize" src = "assets/knight.png" alt= "White bishop" id="bishopw" class= "player">
-    <img class="imgsize" src = "assets/rook.png" alt= "White bishop" id="bishopw" class= "player">
+    <img class="imgsize" src = "assets/pawn_new.png" alt= "black pawn" id="pawnw" class= "player">
+    <img class="imgsize" src = "assets/pawn_new.png" alt= "black pawn" id="pawnw" class= "player">
+    <img class="imgsize" src = "assets/pawn_new.png" alt= "Black pawn" id="pawnw" class= "player">
+    <img class="imgsize" src = "assets/pawn_new.png" alt= "black pawn" id="pawnw" class= "player">
+    <img class="imgsize" src = "assets/pawn_new.png" alt= "Black pawn" id="pawnw" class= "player">
+    <img class="imgsize" src = "assets/pawn_new.png" alt= "Black pawn" id="pawnw" class= "player">
+    <img class="imgsize" src = "assets/pawn_new.png" alt= "Black pawn" id="pawnw" class= "player">
+    <img class="imgsize" src = "assets/pawn_new.png" alt= "Black pawn" id="pawnw" class= "player">
+    <img class="imgsize" src = "assets/rook.png" alt= "Black bishop" id="bishopw" class= "player">
+    <img class="imgsize" src = "assets/knight.png" alt= "Black bishop" id="bishopw" class= "player">
+    <img class="imgsize" src = "assets/bishop.png" alt= "Black bishop" id="bishopw" class= "player">
+    <img class="imgsize" src = "assets/queen.png" alt= "Black bishop" id="bishopw" class= "player">
+    <img class="imgsize" src = "assets/king.png" alt= "Black bishop" id="bishopw" class= "player">
+    <img class="imgsize" src = "assets/bishop.png" alt= "Black bishop" id="bishopw" class= "player">
+    <img class="imgsize" src = "assets/knight.png" alt= "Black bishop" id="bishopw" class= "player">
+    <img class="imgsize" src = "assets/rook.png" alt= "Black bishop" id="bishopw" class= "player">
     <p></p>
     <img class="imgsize" src = "assets/pawn_new_w.png" alt= "White pawn" id="pawnw" class= "player">
     <img class="imgsize" src = "assets/pawn_new_w.png" alt= "White pawn" id="pawnw" class= "player">
@@ -142,6 +142,7 @@
 
     // Builds the chessboard to HTML5 element
     
+
     
     
     var board = document.getElementById("chessboard").getContext("2d");
@@ -153,9 +154,9 @@
     for (let y = 0; y <= height; y += sqrSize) {
         for (let x = 0; x <= height; x += sqrSize) {
             if(sqCount % 2 == 0) {
-                board.fillStyle = "#777777"; // Black squares
+                board.fillStyle = "#F0E68C"; // White squares
             } else {
-                board.fillStyle = "#9e9e9e"; // White squares
+                board.fillStyle = "#8A2BE2"; // Black squares
             }
             board.fillRect(x, y, sqrSize, sqrSize);
             sqCount++
