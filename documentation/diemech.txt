@@ -1,3 +1,5 @@
+*Use Word Wrap for this file*
+
 New six-sided die mechanism
 
 Starting the game
@@ -12,4 +14,4 @@ Capturing Pawns* (NEW!)
 
 - If you attempt to capture the other player's pawn, it would require both players to roll a six-sided die
 	- If you get the the highest number and the opponent gets the lowest number, you win the capture
-	- If the opponent gets the the highest number and the you get the lowest number, you lose the capture and get sent back to your original position where you've moved before
+	- If the opponent gets the the highest number and the you get the lowest number, you lose the capture and get sent back to your original position where you've moved before (you've basically lose your turn at this point)

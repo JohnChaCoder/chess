@@ -24,6 +24,7 @@
     <title>Chess with a twist</title>
 </head>
 <body>
+    <!-- Squares N' Circles -->
     <h1 class="title">This space is a work-in-progress.</h1>
     <p></p>
     <p id="clock"></p>
@@ -32,6 +33,7 @@
     <img class="imgsize" src = "pawn.png" alt= "Black pawn" id="pawn" class= "player">
     <img class="imgsize" src ="bishop.png" alt= "Black bishop" id="bishop" class= "player">
     -->
+    <!-- One question: You want to define 'player' in CSS, right? That is probably not right here -->
     <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
     <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
     <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
@@ -66,16 +68,16 @@
     <img src="assets/knight_w.png" alt="WHITE_KNIGHT" id="knightw" class= "player" style="width:1;height:54px;">
     <img src="assets/rook_w.png" alt="WHITE_ROOK" id="rookw" class= "player" style="width:1;height:54px;">
     <p></p>
-    <canvas id="chessboard" width="500" height="500" style="border:5px solid #000000;">
+    <canvas id="chessboard" width="500" height="500" style="border:5px solid #662b00;">
     <!-- Output an error message for older web browsers that does not support HTML5 -->
-    ERROR: Your browser does not support the HTML5 canvas tag. Please upgrade to a more modern web browser.
+    <p>ERROR: Your browser does not support the HTML5 canvas tag. Please upgrade to a more modern web browser.</p>
     </canvas>
     <p>Click to roll a dice for 1st player.</p>
-    <button class="button2" onclick="randoNumGen()">Roll</button>
+    <button class="button2" onclick="randoNumGen()">Roll</button><img src="assets/dice.png" alt="DICE" style="position: absolute; margin-left: 5px; margin-top: 1px;">
     <p id="dice"></p>
 
     <p>Click to roll a dice for 2nd player.</p>
-    <button class="button2" onclick="randoNumGen2()">Roll</button>
+    <button class="button2" onclick="randoNumGen2()">Roll</button><img src="assets/dice.png" alt="DICE" style="position: absolute; margin-left: 5px; margin-top: 1px;">
     <p id="dice2"></p>
 
     <!--
@@ -106,35 +108,35 @@
 
     <script>
 
-    // please remove all of this
+    // We have no idea what all of this is about, so it is commented out
 
-    if (null) {
+//    if (null) {
+//
+//    }
 
-    }
+//    var state = false // false if no piece has been selected
+//    var currentPiece;
+//    var currentCell;
+//    var cells = document.getElementsByTagName("chessboard"); 
 
-    var state = false // false if no piece has been selected
-    var currentPiece;
-    var currentCell;
-    var cells = document.getElementsByTagName("chessboard"); 
+//    for (var i = 0; i < cells.length; i++) { 
+//       cells[i].onclick = function(){
+//            getCell(this);
+//        }
+//    }
 
-    for (var i = 0; i < cells.length; i++) { 
-        cells[i].onclick = function(){
-            getCell(this);
-        }
-    }
-
-    function getCell(that) {
-        if(!state) { //this means if the state is false (i.e. no piece selected
-            state = true; //piece has been selected
-            currentPiece = that.innerHTML; //get the current piece selected
-            currentCell = that; //get the current cell selection
-        }
-        else { //else, you are moving a piece
-            that.innerHTML = currentPiece; //Set the selected space to the piece that was grabbed
-            currentCell.innerHTML = ""; //remove the piece from its old location
-            state = false; //piece has been placed, so set state back to false
-        }
-    }
+//    function getCell(that) {
+//        if(!state) { //this means if the state is false (i.e. no piece selected
+//            state = true; //piece has been selected
+//            currentPiece = that.innerHTML; //get the current piece selected
+//            currentCell = that; //get the current cell selection
+//        }
+//        else { //else, you are moving a piece
+//            that.innerHTML = currentPiece; //Set the selected space to the piece that was grabbed
+//            currentCell.innerHTML = ""; //remove the piece from its old location
+//            state = false; //piece has been placed, so set state back to false
+//        }
+//    }
 
 
     
@@ -142,22 +144,20 @@
 
     <script>
 
-    // Builds the chessboard to HTML5 element
-    
-    
-    
+    // This code draws and builds the chessboard to the HTML5 element (canvas)
+
     var board = document.getElementById("chessboard").getContext("2d");
     var sqrSize = 62.5;
-    var height = 500;   // has to match with the <canvas> tag for height
-    var width = 500;    // has to match with the <canvas> tag for width
+    var height = 500;   // has to match with the <canvas> tag for correct height
+    var width = 500;    // has to match with the <canvas> tag for correct width
     var sqCount = 0;
 
     for (let y = 0; y <= height; y += sqrSize) {
         for (let x = 0; x <= height; x += sqrSize) {
             if(sqCount % 2 == 0) {
-                board.fillStyle = "#b96600"; // Black squares
+                board.fillStyle = "#b96600"; // Dark-orange squares
             } else {
-                board.fillStyle = "#ff8c00"; // White squares
+                board.fillStyle = "#ff8c00"; // Orange squares
             }
             board.fillRect(x, y, sqrSize, sqrSize);
             sqCount++
@@ -251,20 +251,20 @@
     <script>
     // Shows how to play chess (INCOMPLETE)
     function howToPlay() {
-        alert("The game of Chess with the \"only\" Twist - How to Play\n\nThere is no information available.");
+        alert("A Chess Game with a Dice mechanic - How to Play\n\nThere is no information available.");
     }
     
     // Shows the info of the site
     function about() {
         //alert("Chess Titans with a Twist\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.\n\nCreated and edited using Visual Studio Code.\n© 2019-2020 Microsoft Corporation. All rights reserved.")
-        alert("The game of Chess with the \"only\" Twist\n(Version 0.3.0 Alpha)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.");
+        alert("A Chess Game with a Dice mechanic\n(Version 0.3.0 Alpha)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.");
     }
     </script>
     <p></p>
     
     <p></p>
     <!--
-    <h5 class="copyright">Version v0.0.0 Pre-Alpha<br>© 2019-2020. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
+    <h5 class="copyright">Version v0.3.0 Alpha<br>© 2019-2020. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
     -->
     <h5 class="copyright">Version v0.3.0 Alpha<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
 </body>
