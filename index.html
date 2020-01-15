@@ -171,7 +171,9 @@
     var queen   = [4,60];
     var pawn    = [8,9,10,11,12,13,14,15,48,49,50,51,52,53,54,55];
 
-    // TODO: make this work
+    // TODO: make this work\
+
+
     for (let i = 0; i < 64; i++) {
         var div = document.createElement("div");
         document.getElementById("chessboard")
@@ -215,6 +217,7 @@
         elmnt.onmousedown = dragMouseDown;
     }
 
+
     function dragMouseDown(e) {
         e = e || window.event;
         e.preventDefault();
@@ -248,7 +251,68 @@
     </script>
     <p></p>
     <p></p>
+    <style>
+
+    #div1 {
+        position: relative;
+        width:45px;
+        height:45px;
+        margin-block-start: 10px;
+        margin-top:100px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+    }
+    </style>
     <script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+    function drag(ev){
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+function drop(ev) {
+ev.preventDefault();
+var data = ev.dataTransfer. getData("text");
+ev.target. appendChild(document.getElementById(data));
+}
+    </script>
+    <div id="div1" ondrop="drop(event)"
+    ondragover="allowDrop(event)"></area>
+    <br>
+    <img id="drag1" src= "king.png" draggable="true"
+    ondragstart="drag(event)" width="500" height="500">
+
+    
+
+    <script>
+function mapmaker4(){
+var m = document.getElementById("boardgame"),
+sqrSize = 85, 
+offset = 5
+yEnd = 260,
+yStart = 0,
+xxStart = 0, 
+xEnd = 851;
+var i = 0
+
+    for (let y = yStart ; y <=yEnd ; y += sqrSize){
+        for(let x = xStart ; x <= xEnd ; sqrSize){
+            let square = document.createElement("area");
+            sqaure.setAttribute("value", `${i}`);
+            m.appendChild(square);
+            i++
+            square.setAttribute("shape", "sqr");
+      square.setAttribute("coords", `${x+offset},${y+offset}, ${x+sqrSize}, ${y+sqrSize}`);
+      square.setAttribute("href", "#");
+      square.setAttribute("alt", "fourmap");
+       
+    m.appendChild(square);
+
+        }
+    }
+}
+
+
     // Shows how to play chess (INCOMPLETE)
     function howToPlay() {
         alert("A Chess Game with Dices - How to Play\n\nThere is no information available.");
@@ -260,6 +324,7 @@
         alert("A Chess Game with Dices\n(Version 0.5.0 Alpha)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.");
     }
     </script>
+
     <p></p>
     
     <p></p>
