@@ -25,7 +25,7 @@
 </head>
 <body>
     <!-- Squares N' Circles -->
-    <h1 class="title">This space is a work-in-progress.</h1>
+    <h1 class="title">Chess with Dices.</h1>
     <p></p>
     <p id="clock"></p>
     <p></p>
@@ -45,11 +45,11 @@
     <img src="assets/rook.png" alt="BLACK_ROOK" id="rook" class= "player" style="width:1;height:54px;">
     <img src="assets/knight.png" alt="BLACK_KNIGHT" id="knight" class= "player" style="width:1;height:54px;">
     <img src="assets/bishop.png" alt="BLACK_BISHOP" id="bishop" class= "player" style="width:1;height:54px;">
-    <img src="assets/queen.png" alt="BLACK_QUEEN" id="queen" class= "player" style="width:1;height:54px;">
-    <img src="assets/king.png" alt="BLACK_KING" id="king" class= "player" style="width:1;height:54px;">
     <img src="assets/bishop.png" alt="BLACK_BISHOP" id="bishop" class= "player" style="width:1;height:54px;">
     <img src="assets/knight.png" alt="BLACK_KNIGHT" id="knight" class= "player" style="width:1;height:54px;">
     <img src="assets/rook.png" alt="BLACK_ROOK" id="rook" class= "player" style="width:1;height:54px;">
+    <img src="assets/queen.png" alt="BLACK_QUEEN" id="queen" class= "player" style="width:1;height:54px;">
+    <img src="assets/king.png" alt="BLACK_KING" id="king" class= "player" style="width:1;height:54px;">
     <p></p>
     <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
     <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
@@ -62,16 +62,22 @@
     <img src="assets/rook_w.png" alt="WHITE_ROOK" id="rookw" class= "player" style="width:1;height:54px;">
     <img src="assets/knight_w.png" alt="WHITE_KNIGHT" id="knightw" class= "player" style="width:1;height:54px;">
     <img src="assets/bishop_w.png" alt="WHITE_BISHOP" id="bishopw" class= "player" style="width:1;height:54px;">
+    <img src="assets/bishop_w.png" alt="WHITE_BISHOP" id="bishopw" class= "player" style="width:1;height:54px;">
+    <img src="assets/knight_w.png" alt="WHITE_KNIGHT" id="knightw" class= "player" style="width:1;height:54px;">
+    <img src="assets/rook_w.png" alt="WHITE_ROOK" id="rookw" class= "player" style="width:1;height:54px;">
     <img src="assets/queen_w.png" alt="WHITE_QUEEN" id="queenw" class= "player" style="width:1;height:54px;">
     <img src="assets/king_w.png" alt="WHITE_KING" id="kingw" class= "player" style="width:1;height:54px;">
-    <img src="assets/bishop_w.png" alt="WHITE_BISHOP" id="bishopw" class= "player" style="width:1;height:54px;">
-    <img src="assets/knight_w.png" alt="WHITE_KNIGHT" id="knightw" class= "player" style="width:1;height:54px;">
-    <img src="assets/rook_w.png" alt="WHITE_ROOK" id="rookw" class= "player" style="width:1;height:54px;">
     <p></p>
-    <canvas id="chessboard" width="500" height="500" style="border:5px solid #662b00;">
-    <!-- Output an error message for older web browsers that does not support HTML5 -->
-    <p>ERROR: Your browser does not support the HTML5 canvas tag. Please upgrade to a more modern web browser.</p>
-    </canvas>
+    <div id="board">
+        <canvas id="chessboard" width="500" height="500" style="border:2px solid #662b00;">
+            <p></p>
+            </canvas>
+        <div class="square" id="space-1">
+        
+            <img src="assets/king_w.png" alt="WHITE_KING" id="kingw" class= "player" style="width:1;height:54px;">
+        </div>
+    </div>
+   
     <p>Click to roll a dice for 1st player.</p>
     <button class="button2" onclick="randoNumGen()">Roll</button><img src="assets/dice.png" alt="DICE" style="position: absolute; margin-left: 5px; margin-top: 1px;">
     <p id="dice"></p>
@@ -92,8 +98,21 @@
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     document.getElementById("clock").innerHTML = `Welcome! You've entered on ${days[date.getDay()]} ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()} at ${date.getHours()}:${date.getMinutes()}!`;
     </script>
+<style>
+    #div1 {
+        position: relative;
+        width:50px;
+        height:50px;
+        margin-block-start: 1px;
+        margin-right:100px;
+        padding: 1px;
+        border: 1px solid #aaaaaa;
+    }
 
+
+    </style>
     <script>
+        
     // a random number genrator
     function randoNumGen() {
         var numgen = `The roll is: ${Math.floor((Math.random() * 6) + 1)}`;
@@ -106,39 +125,8 @@
     }
     </script>
 
+</div>
     <script>
-
-    // We have no idea what all of this is about, so it is commented out
-
-//    if (null) {
-//
-//    }
-
-//    var state = false // false if no piece has been selected
-//    var currentPiece;
-//    var currentCell;
-//    var cells = document.getElementsByTagName("chessboard"); 
-
-//    for (var i = 0; i < cells.length; i++) { 
-//       cells[i].onclick = function(){
-//            getCell(this);
-//        }
-//    }
-
-//    function getCell(that) {
-//        if(!state) { //this means if the state is false (i.e. no piece selected
-//            state = true; //piece has been selected
-//            currentPiece = that.innerHTML; //get the current piece selected
-//            currentCell = that; //get the current cell selection
-//        }
-//        else { //else, you are moving a piece
-//            that.innerHTML = currentPiece; //Set the selected space to the piece that was grabbed
-//            currentCell.innerHTML = ""; //remove the piece from its old location
-//            state = false; //piece has been placed, so set state back to false
-//        }
-//    }
-
-
     
     </script>
 
@@ -147,7 +135,7 @@
     // This code draws and builds the chessboard to the HTML5 element (canvas)
 
     var board = document.getElementById("chessboard").getContext("2d");
-    var sqrSize = 62.5;
+    var sqrSize = 50;
     var height = 500;   // has to match with the <canvas> tag for correct height
     var width = 500;    // has to match with the <canvas> tag for correct width
     var sqCount = 0;
@@ -251,18 +239,27 @@
     </script>
     <p></p>
     <p></p>
-    <style>
 
-    #div1 {
+
+    
+<style>
+    #board{
         position: relative;
-        width:45px;
-        height:45px;
-        margin-block-start: 10px;
-        margin-top:100px;
-        padding: 10px;
-        border: 1px solid #aaaaaa;
     }
-    </style>
+#space-1 {
+    position:absolute;
+    top:0px;
+    left:0px;
+
+}
+</style>
+
+
+
+
+
+
+</div>
     <script>
     function allowDrop(ev) {
         ev.preventDefault();
@@ -279,8 +276,8 @@ ev.target. appendChild(document.getElementById(data));
     <div id="div1" ondrop="drop(event)"
     ondragover="allowDrop(event)"></area>
     <br>
-    <img id="drag1" src= "king.png" draggable="true"
-    ondragstart="drag(event)" width="500" height="500">
+    <img id="drag1" src= "queen.png"true
+    ondragstart="drag(event)" width="50" height="50">
 
     
 
