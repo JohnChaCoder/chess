@@ -80,6 +80,8 @@
     <button class="button2" onclick="randoNumGen2()">Roll</button><img src="assets/dice.png" alt="DICE" style="position: absolute; margin-left: 5px; margin-top: 1px;">
     <p id="dice2"></p>
 
+    <p>Click to refresh the dice for both players.</p>
+    <button class="button2" class="otherBtns" onclick="diceRefresh()">Refresh Dice</button>
     <p>Click to restart the game from the beginning.</p>
     <button class="button2" class="otherBtns" onclick="reset()">Restart Game</button>
     <p class="spacer"></p>
@@ -98,6 +100,13 @@
     // restarts the game
     function reset() {
         location.reload();
+    }
+
+    // refreshes the dice number for both dices
+    function diceRefresh() {
+        var numgen = ""
+        document.getElementById("dice").innerHTML = numgen;
+        document.getElementById("dice2").innerHTML = numgen;
     }
     </script>
     
