@@ -109,3 +109,6 @@ button:active {
     max-width: 1%;
     height: auto;
 }
+.spacer {
+    margin-bottom: 45px;
+}
