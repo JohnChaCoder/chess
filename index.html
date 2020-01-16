@@ -81,7 +81,7 @@
     </div>
    
     <p>Click to roll a dice for 1st player.</p>
-    <button class="button2" onclick="randoNumGen()">Roll</button><img src="assets/dice.png" alt="DICE" style="position: absolute; margin-left: 5px; margin-top: 1px;">
+    <button class="button2" onclick="randoNumGen1()">Roll</button><img src="assets/dice.png" alt="DICE" style="position: absolute; margin-left: 5px; margin-top: 1px;">
     <p id="dice"></p>
 
     <p>Click to roll a dice for 2nd player.</p>
@@ -101,7 +101,8 @@
     var date = new Date();
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    document.getElementById("clock").innerHTML = `Welcome! You've entered on ${days[date.getDay()]} ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()} at ${date.getHours()}:${date.getMinutes()}!`;
+    //document.getElementById("clock").innerHTML = `Welcome! You've entered on ${days[date.getDay()]} ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()} at ${date.getHours()}:${date.getMinutes()}!`; // for modern browsers only
+    document.getElementById("clock").innerHTML = 'Welcome! You\'ve entered on ' + (days[date.getDay()]) + ' ' + (months[date.getMonth()]) + ' ' + (date.getDate()) + ',' + ' ' + (date.getFullYear()) + ' ' + 'at' + ' ' + (date.getHours()) + ':' + (date.getMinutes()) + '!'; // for legacy and modern browsers
     </script>
 <style>
     #div1 {
@@ -132,18 +133,22 @@
     
     <script>
     // a random number genrator
-    function randoNumGen() {
-        var numgen = `The roll is: ${Math.floor((Math.random() * 6) + 1)}`;
+    function randoNumGen1() {
+        //var numgen = `The roll is: ${Math.floor((Math.random() * 6) + 1)}`; // for modern browsers only
+        var numgen = 'The roll is: ' + (Math.floor((Math.random() * 6) + 1)); // for legacy and modern browsers
         document.getElementById("dice").innerHTML = numgen;
     }
 
     function randoNumGen2() {
-        var numgen = `The roll is: ${Math.floor((Math.random() * 6) + 1)}`;
+        //var numgen = `The roll is: ${Math.floor((Math.random() * 6) + 1)}`; // for modern browsers only
+        var numgen = 'The roll is: ' + (Math.floor((Math.random() * 6) + 1)); // for legacy and modern browsers
         document.getElementById("dice2").innerHTML = numgen;
     }
     </script>
 
+<!--
 </div>
+-->
     <script>
     
     </script>
@@ -265,8 +270,8 @@
         
         // Shows the info of the site
         function about() {
-            //alert("Chess N' Dices\n(Version 0.5.5 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.\n\nCreated and edited using Visual Studio Code.\n© 2019-2020 Microsoft Corporation. All rights reserved.")
-            alert("Chess N' Dices\n(Version 0.5.5 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.");
+            //alert("Chess N' Dices\n(Version 0.6.0 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.\n\nCreated and edited using Visual Studio Code.\n© 2019-2020 Microsoft Corporation. All rights reserved.")
+            alert("Chess N' Dices\n(Version 0.6.0 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.");
         }
         </script>
     
@@ -274,9 +279,9 @@
         
         <p></p>
         <!--
-        <h5 class="copyright">Version v0.5.5 Beta<br>© 2019-2020. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
+        <h5 class="copyright">Version v0.6.0 Beta<br>© 2019-2020. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
         -->
-        <h5 class="copyright">Version v0.5.5 Beta<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
+        <h5 class="copyright">Version v0.6.0 Beta<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
     <p></p>
 
 
