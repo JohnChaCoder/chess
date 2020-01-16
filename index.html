@@ -71,6 +71,8 @@
     <div id="board">
         <canvas id="chessboard" width="500" height="500" style="border:2px solid #662b00;">
             <p></p>
+    <!-- Output an error message for older web browsers that does not support HTML5 -->
+    <p>ERROR: Your browser does not support the HTML5 canvas tag. Please upgrade to a more modern web browser.</p>
             </canvas>
         <div class="square" id="space-1">
         
@@ -254,6 +256,27 @@
 }
     </script>
     <p></p>
+    <script>
+        // Shows how to play chess (INCOMPLETE)
+        function howToPlay() {
+            //alert("Chess N' Dices - How to Play\n\nThe objective of Chess is to get the other player's king in checkmate, while capturing other pieces.\n\nSix-sided Die rules\n\nStarting the game\n\nAt the start of the game, both players have a six-sided die, and each player rolls their own die to see who gets the highest number. If the number of the die on your side is higher, then you will go first; otherwise the other player goes first if you get the lowest number on your die.\n\nCapturing Pawns\n\nIf you attempt to capture the other player's pawn, it would require both players to roll a six-sided die If you get the the highest number and the opponent gets the lowest number, you win the capture If the opponent gets the the highest number and the you get the lowest number, you lose the capture and get sent back to your original position where you've moved before (you've basically lose your turn at this point)");
+            alert("Chess N' Dices - How to Play\n\nThe objective of Chess is to get the other player's king in checkmate, while capturing other pieces.\n\nSix-sided Die rules\n\nStarting the game\n\nAt the start of the game, both players have a six-sided die, and each player rolls their own die to see who gets the highest number. If the number of the die on your side is higher, then you will go first; otherwise the other player goes first if you get the lowest number on your die.");
+        }
+        
+        // Shows the info of the site
+        function about() {
+            //alert("Chess N' Dices\n(Version 0.5.5 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.\n\nCreated and edited using Visual Studio Code.\n© 2019-2020 Microsoft Corporation. All rights reserved.")
+            alert("Chess N' Dices\n(Version 0.5.5 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.");
+        }
+        </script>
+    
+        <p></p>
+        
+        <p></p>
+        <!--
+        <h5 class="copyright">Version v0.5.5 Beta<br>© 2019-2020. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
+        -->
+        <h5 class="copyright">Version v0.5.5 Beta<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
     <p></p>
 
 
@@ -295,28 +318,7 @@ ev.target. appendChild(document.getElementById(data));
     <img id="drag1" src= "queen.png"true
     ondragstart="drag(event)" width="50" height="50">
 
-        <script>
-        // Shows how to play chess (INCOMPLETE)
-        function howToPlay() {
-            //alert("Chess N' Dices - How to Play\n\nThe objective of Chess is to get the other player's king in checkmate, while capturing other pieces.\n\nSix-sided Die rules\n\nStarting the game\n\nAt the start of the game, both players have a six-sided die, and each player rolls their own die to see who gets the highest number. If the number of the die on your side is higher, then you will go first; otherwise the other player goes first if you get the lowest number on your die.\n\nCapturing Pawns\n\nIf you attempt to capture the other player's pawn, it would require both players to roll a six-sided die If you get the the highest number and the opponent gets the lowest number, you win the capture If the opponent gets the the highest number and the you get the lowest number, you lose the capture and get sent back to your original position where you've moved before (you've basically lose your turn at this point)");
-            alert("Chess N' Dices - How to Play\n\nThe objective of Chess is to get the other player's king in checkmate, while capturing other pieces.\n\nSix-sided Die rules\n\nStarting the game\n\nAt the start of the game, both players have a six-sided die, and each player rolls their own die to see who gets the highest number. If the number of the die on your side is higher, then you will go first; otherwise the other player goes first if you get the lowest number on your die.");
-        }
-        
-        // Shows the info of the site
-        function about() {
-            //alert("Chess N' Dices\n(Version 0.5.5 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.\n\nCreated and edited using Visual Studio Code.\n© 2019-2020 Microsoft Corporation. All rights reserved.")
-            alert("Chess N' Dices\n(Version 0.5.5 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.");
-        }
-        </script>
-    
-        <p></p>
-        
-        <p></p>
-        <!--
-        <h5 class="copyright">Version v0.5.5 Beta<br>© 2019-2020. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
-        -->
-        <h5 class="copyright">Version v0.5.5 Beta<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
-    <style>
+<style>
 
         #div1 {
             position: relative;
