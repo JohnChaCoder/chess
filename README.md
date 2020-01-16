@@ -1,7 +1,7 @@
-# Chess with a twist
-A chess game with a dice mechanism.
+# Chess N' Dices
+Chess N' Dices is a standard game of Chess but with the addition of a six-sided die to change up the rules of the game, making it more strategic and competitive.
 
-(This is a work-in-progress. Help us out improving and working on with the coding!)
+(This game is a work-in-progress. You can help us out on improving and working on with the coding!)
 
 This source code is open-source. You are free to make any changes to the source, make some improvements into it, and fork this source for your own chess-like games.
 
