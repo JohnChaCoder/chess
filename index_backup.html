@@ -45,11 +45,11 @@
     <img src="assets/rook.png" alt="BLACK_ROOK" id="rook" class= "player" style="width:1;height:54px;">
     <img src="assets/knight.png" alt="BLACK_KNIGHT" id="knight" class= "player" style="width:1;height:54px;">
     <img src="assets/bishop.png" alt="BLACK_BISHOP" id="bishop" class= "player" style="width:1;height:54px;">
-    <img src="assets/queen.png" alt="BLACK_QUEEN" id="queen" class= "player" style="width:1;height:54px;">
-    <img src="assets/king.png" alt="BLACK_KING" id="king" class= "player" style="width:1;height:54px;">
     <img src="assets/bishop.png" alt="BLACK_BISHOP" id="bishop" class= "player" style="width:1;height:54px;">
     <img src="assets/knight.png" alt="BLACK_KNIGHT" id="knight" class= "player" style="width:1;height:54px;">
     <img src="assets/rook.png" alt="BLACK_ROOK" id="rook" class= "player" style="width:1;height:54px;">
+    <img src="assets/queen.png" alt="BLACK_QUEEN" id="queen" class= "player" style="width:1;height:54px;">
+    <img src="assets/king.png" alt="BLACK_KING" id="king" class= "player" style="width:1;height:54px;">
     <p></p>
     <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
     <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
@@ -62,18 +62,26 @@
     <img src="assets/rook_w.png" alt="WHITE_ROOK" id="rookw" class= "player" style="width:1;height:54px;">
     <img src="assets/knight_w.png" alt="WHITE_KNIGHT" id="knightw" class= "player" style="width:1;height:54px;">
     <img src="assets/bishop_w.png" alt="WHITE_BISHOP" id="bishopw" class= "player" style="width:1;height:54px;">
+    <img src="assets/bishop_w.png" alt="WHITE_BISHOP" id="bishopw" class= "player" style="width:1;height:54px;">
+    <img src="assets/knight_w.png" alt="WHITE_KNIGHT" id="knightw" class= "player" style="width:1;height:54px;">
+    <img src="assets/rook_w.png" alt="WHITE_ROOK" id="rookw" class= "player" style="width:1;height:54px;">
     <img src="assets/queen_w.png" alt="WHITE_QUEEN" id="queenw" class= "player" style="width:1;height:54px;">
     <img src="assets/king_w.png" alt="WHITE_KING" id="kingw" class= "player" style="width:1;height:54px;">
-    <img src="assets/bishop_w.png" alt="WHITE_BISHOP" id="bishopw" class= "player" style="width:1;height:54px;">
-    <img src="assets/knight_w.png" alt="WHITE_KNIGHT" id="knightw" class= "player" style="width:1;height:54px;">
-    <img src="assets/rook_w.png" alt="WHITE_ROOK" id="rookw" class= "player" style="width:1;height:54px;">
     <p></p>
-    <canvas id="chessboard" width="500" height="500" style="border:5px solid #662b00;">
+    <div id="board">
+        <canvas id="chessboard" width="500" height="500" style="border:2px solid #662b00;">
+            <p></p>
     <!-- Output an error message for older web browsers that does not support HTML5 -->
     <p>ERROR: Your browser does not support the HTML5 canvas tag. Please upgrade to a more modern web browser.</p>
-    </canvas>
+            </canvas>
+        <div class="square" id="space-1">
+        
+            <img src="assets/king_w.png" alt="WHITE_KING" id="kingw" class= "player" style="width:1;height:54px;">
+        </div>
+    </div>
+   
     <p>Click to roll a dice for 1st player.</p>
-    <button class="button2" onclick="randoNumGen()">Roll</button><img src="assets/dice.png" alt="DICE" style="position: absolute; margin-left: 5px; margin-top: 1px;">
+    <button class="button2" onclick="randoNumGen1()">Roll</button><img src="assets/dice.png" alt="DICE" style="position: absolute; margin-left: 5px; margin-top: 1px;">
     <p id="dice"></p>
 
     <p>Click to roll a dice for 2nd player.</p>
@@ -93,9 +101,22 @@
     var date = new Date();
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    document.getElementById("clock").innerHTML = `Welcome! You've entered on ${days[date.getDay()]} ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()} at ${date.getHours()}:${date.getMinutes()}!`;
+    //document.getElementById("clock").innerHTML = `Welcome! You've entered on ${days[date.getDay()]} ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()} at ${date.getHours()}:${date.getMinutes()}!`; // for modern browsers only
+    document.getElementById("clock").innerHTML = 'Welcome! You\'ve entered on ' + (days[date.getDay()]) + ' ' + (months[date.getMonth()]) + ' ' + (date.getDate()) + ',' + ' ' + (date.getFullYear()) + ' ' + 'at' + ' ' + (date.getHours()) + ':' + (date.getMinutes()) + '!'; // for legacy and modern browsers
     </script>
+<style>
+    #div1 {
+        position: relative;
+        width:50px;
+        height:50px;
+        margin-block-start: 1px;
+        margin-right:100px;
+        padding: 1px;
+        border: 1px solid #aaaaaa;
+    }
 
+
+    </style>
     <script>
     // restarts the game
     function reset() {
@@ -112,51 +133,24 @@
     
     <script>
     // a random number genrator
-    function randoNumGen() {
-        var numgen = `The roll is: ${Math.floor((Math.random() * 6) + 1)}`;
+    function randoNumGen1() {
+        //var numgen = `The roll is: ${Math.floor((Math.random() * 6) + 1)}`; // for modern browsers only
+        var numgen = 'The roll is: ' + (Math.floor((Math.random() * 6) + 1)); // for legacy and modern browsers
         document.getElementById("dice").innerHTML = numgen;
     }
 
     function randoNumGen2() {
-        var numgen = `The roll is: ${Math.floor((Math.random() * 6) + 1)}`;
+        //var numgen = `The roll is: ${Math.floor((Math.random() * 6) + 1)}`; // for modern browsers only
+        var numgen = 'The roll is: ' + (Math.floor((Math.random() * 6) + 1)); // for legacy and modern browsers
         document.getElementById("dice2").innerHTML = numgen;
     }
     </script>
 
+<!--
+</div>
+-->
     <script>
-
-    // We have no idea what all of this is about, so it is commented out
-
-//    if (null) {
-//
-//    }
-
-//    var state = false // false if no piece has been selected
-//    var currentPiece;
-//    var currentCell;
-//    var cells = document.getElementsByTagName("chessboard"); 
-
-//    for (var i = 0; i < cells.length; i++) { 
-//       cells[i].onclick = function(){
-//            getCell(this);
-//        }
-//    }
-
-//    function getCell(that) {
-//        if(!state) { //this means if the state is false (i.e. no piece selected
-//            state = true; //piece has been selected
-//            currentPiece = that.innerHTML; //get the current piece selected
-//            currentCell = that; //get the current cell selection
-//        }
-//        else { //else, you are moving a piece
-//            that.innerHTML = currentPiece; //Set the selected space to the piece that was grabbed
-//            currentCell.innerHTML = ""; //remove the piece from its old location
-//            state = false; //piece has been placed, so set state back to false
-//        }
-//    }
-
-
-    
+    $(".player").draggable();
     </script>
 
     <script>
@@ -267,7 +261,7 @@
 }
     </script>
     <p></p>
-        <script>
+    <script>
         // Shows how to play chess (INCOMPLETE)
         function howToPlay() {
             //alert("Chess N' Dices - How to Play\n\nThe objective of Chess is to get the other player's king in checkmate, while capturing other pieces.\n\nSix-sided Die rules\n\nStarting the game\n\nAt the start of the game, both players have a six-sided die, and each player rolls their own die to see who gets the highest number. If the number of the die on your side is higher, then you will go first; otherwise the other player goes first if you get the lowest number on your die.\n\nCapturing Pawns\n\nIf you attempt to capture the other player's pawn, it would require both players to roll a six-sided die If you get the the highest number and the opponent gets the lowest number, you win the capture If the opponent gets the the highest number and the you get the lowest number, you lose the capture and get sent back to your original position where you've moved before (you've basically lose your turn at this point)");
@@ -276,8 +270,8 @@
         
         // Shows the info of the site
         function about() {
-            //alert("Chess N' Dices\n(Version 0.5.5 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.\n\nCreated and edited using Visual Studio Code.\n© 2019-2020 Microsoft Corporation. All rights reserved.")
-            alert("Chess N' Dices\n(Version 0.5.5 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.");
+            //alert("Chess N' Dices\n(Version 0.6.0 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.\n\nCreated and edited using Visual Studio Code.\n© 2019-2020 Microsoft Corporation. All rights reserved.")
+            alert("Chess N' Dices\n(Version 0.6.0 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.");
         }
         </script>
     
@@ -285,10 +279,51 @@
         
         <p></p>
         <!--
-        <h5 class="copyright">Version v0.5.5 Beta<br>© 2019-2020. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
+        <h5 class="copyright">Version v0.6.0 Beta<br>© 2019-2020. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
         -->
-        <h5 class="copyright">Version v0.5.5 Beta<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
-    <style>
+        <h5 class="copyright">Version v0.6.0 Beta<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
+    <p></p>
+
+
+    
+<style>
+    #board{
+        position: relative;
+    }
+#space-1 {
+    position:absolute;
+    top:0px;
+    left:0px;
+
+}
+</style>
+
+
+
+
+
+
+</div>
+    <script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+    function drag(ev){
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+function drop(ev) {
+ev.preventDefault();
+var data = ev.dataTransfer. getData("text");
+ev.target. appendChild(document.getElementById(data));
+}
+    </script>
+    <div id="div1" ondrop="drop(event)"
+    ondragover="allowDrop(event)"></area>
+    <br>
+    <img id="drag1" src= "queen.png"true
+    ondragstart="drag(event)" width="50" height="50">
+
+<style>
 
         #div1 {
             position: relative;

@@ -112,3 +112,34 @@ button:active {
 .spacer {
     margin-bottom: 45px;
 }
+
+
+.piece {display:inline-block;width:1;font-size:2em;text-align:center;z-index:100; cursor:pointer;
+    position:relative;top:85px;color:darkred}
+.piece.b{top:-85px;color:darkslategray}
+.blank{color:#FFF;border:1px solid black;display:inline-block;width:12.5%;font-size:2em;}
+.g{background-color:#ccc;}
+.g.blank{color:#ccc;}
+    
+@media screen and (min-width: 480px) {
+.chessboard {
+    
+    max-width:730px;margin:0 auto;
+}
+.blank{font-size:3em;}
+.piece{font-size:3em;}
+.piece{top:120px}
+.piece.b{top:-120px}
+}
+div {
+    position: absolute;
+    top: 0px;
+    border: 3px solid green;
+  }
+  div.c {
+    position: absolute;
+    left: 150px;
+    width: 200px;
+    height: 120px;
+    border: 3px solid red;
+  }
