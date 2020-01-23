@@ -34,39 +34,7 @@
     <img class="imgsize" src ="bishop.png" alt= "Black bishop" id="bishop" class= "player">
     -->
     <!-- One question: You want to define 'player' in CSS, right? That is probably not right here -->
-    <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
-    <img src="assets/rook.png" alt="BLACK_ROOK" id="rook" class= "player" style="width:1;height:54px;">
-    <img src="assets/knight.png" alt="BLACK_KNIGHT" id="knight" class= "player" style="width:1;height:54px;">
-    <img src="assets/bishop.png" alt="BLACK_BISHOP" id="bishop" class= "player" style="width:1;height:54px;">
-    <img src="assets/bishop.png" alt="BLACK_BISHOP" id="bishop" class= "player" style="width:1;height:54px;">
-    <img src="assets/knight.png" alt="BLACK_KNIGHT" id="knight" class= "player" style="width:1;height:54px;">
-    <img src="assets/rook.png" alt="BLACK_ROOK" id="rook" class= "player" style="width:1;height:54px;">
-    <img src="assets/queen.png" alt="BLACK_QUEEN" id="queen" class= "player" style="width:1;height:54px;">
-    <img src="assets/king.png" alt="BLACK_KING" id="king" class= "player" style="width:1;height:54px;">
-    <p></p>
-    <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
-    <img src="assets/rook_w.png" alt="WHITE_ROOK" id="rookw" class= "player" style="width:1;height:54px;">
-    <img src="assets/knight_w.png" alt="WHITE_KNIGHT" id="knightw" class= "player" style="width:1;height:54px;">
-    <img src="assets/bishop_w.png" alt="WHITE_BISHOP" id="bishopw" class= "player" style="width:1;height:54px;">
-    <img src="assets/bishop_w.png" alt="WHITE_BISHOP" id="bishopw" class= "player" style="width:1;height:54px;">
-    <img src="assets/knight_w.png" alt="WHITE_KNIGHT" id="knightw" class= "player" style="width:1;height:54px;">
-    <img src="assets/rook_w.png" alt="WHITE_ROOK" id="rookw" class= "player" style="width:1;height:54px;">
-    <img src="assets/queen_w.png" alt="WHITE_QUEEN" id="queenw" class= "player" style="width:1;height:54px;">
-    <img src="assets/king_w.png" alt="WHITE_KING" id="kingw" class= "player" style="width:1;height:54px;">
+    
     <p></p>
     <div id="board">
         <canvas id="chessboard" width="500" height="500" style="border:2px solid #662b00;">
@@ -323,16 +291,46 @@ ev.target. appendChild(document.getElementById(data));
     <div id="div1" ondrop="drop(event)"
     ondragover="allowDrop(event)"></area>
     <br>
-    <img id="drag1" src= "queen.png"true
+    <img id="drag1" src= "rook.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "assets/knight.png"true
+    ondragstart="drag(event)" width="50" height="50">
+    <img id="drag1" src= "bishop.png"true
+    ondragstart="drag(event)" width="60" height="60">
+      <img id="drag1" src= "queen.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "king.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "assets/knight.png"true
+    ondragstart="drag(event)" width="50" height="50">
+  <img id="drag1" src= "bishop.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "rook.png"true
+    ondragstart="drag(event)" width="60" height="60">
+  <img id="drag1" src= "pawn.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "pawn.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "pawn.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "pawn.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "pawn.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "pawn.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "pawn.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "pawn.png"true
     ondragstart="drag(event)" width="60" height="60">
 <style>
 
         #div1 {
-            position: relative;
-            width:45px;
-            height:45px;
-            margin-block-start: 10px;
-            margin-top:100px;
+            position: absolute;
+            width:500px;
+            height:500px;
+            margin-block-start: 60px;
+            margin-bottom:20px;
             padding: 10px;
             border: 1px solid #aaaaaa;
         }
@@ -353,12 +351,12 @@ ev.target. appendChild(document.getElementById(data));
 <style>
 
 div.a {
-    position: absolute;
-    left: 52px;
-    bottom:781px ;
-    right:px ;
-    width:600px;
-    height: 600px;
+    position: relative;
+    left: 50px;
+    bottom:100px ;
+    right:1000px ;
+    width:500px;
+    height: 500px;
     border: 1px solid black;
 }
 
