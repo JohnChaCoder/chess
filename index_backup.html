@@ -33,7 +33,6 @@
     <img class="imgsize" src = "pawn.png" alt= "Black pawn" id="pawn" class= "player">
     <img class="imgsize" src ="bishop.png" alt= "Black bishop" id="bishop" class= "player">
     -->
-    <!-- One question: You want to define 'player' in CSS, right? That is probably not right here -->
     <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
     <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
     <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
@@ -97,7 +96,7 @@
     <button class="button2" class="otherBtns" onclick="about()">About Chess</button>
 
     <script>
-    // date and clock (probably redundant)
+    // Outputs the date and clock
     var date = new Date();
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -150,6 +149,7 @@
 </div>
 -->
     <script>
+    // non-working code
     $(".player").draggable();
     </script>
 
@@ -183,7 +183,6 @@
     var pawn    = [8,9,10,11,12,13,14,15,48,49,50,51,52,53,54,55];
 
     // TODO: make this work
-
 
     for (let i = 0; i < 64; i++) {
         var div = document.createElement("div");
@@ -270,8 +269,8 @@
         
         // Shows the info of the site
         function about() {
-            //alert("Chess N' Dices\n(Version 0.6.0 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.\n\nCreated and edited using Visual Studio Code.\n© 2019-2020 Microsoft Corporation. All rights reserved.")
-            alert("Chess N' Dices\n(Version 0.6.0 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.");
+            //alert("Chess N' Dices\n(Version 0.6.5 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.\n\nCreated and edited using Visual Studio Code.\n© 2019-2020 Microsoft Corporation. All rights reserved.")
+            alert("Chess N' Dices\n(Version 0.6.5 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.");
         }
         </script>
     
@@ -279,9 +278,9 @@
         
         <p></p>
         <!--
-        <h5 class="copyright">Version v0.6.0 Beta<br>© 2019-2020. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
+        <h5 class="copyright">Version v0.6.5 Beta<br>© 2019-2020. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
         -->
-        <h5 class="copyright">Version v0.6.0 Beta<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
+        <h5 class="copyright">Version v0.6.5 Beta<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
     <p></p>
 
 
@@ -353,7 +352,7 @@ ev.target. appendChild(document.getElementById(data));
         ondragover="allowDrop(event)"></area>
         <br>
         <img id="drag1" src= "king.png" draggable="true"
-        ondragstart="drag(event)" width="500" height="500">
+        ondragstart="drag(event)" width="50" height="50">
 
         <script>
     function mapmaker4(){
