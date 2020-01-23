@@ -291,13 +291,16 @@
     }
 #space-1 {
     position:absolute;
-    top:0px;
-    left:0px;
+    top:5px;
+    left:24px;
 
 }
+
 </style>
 
-
+<div>
+  
+</div>
 
 
 
@@ -320,8 +323,7 @@ ev.target. appendChild(document.getElementById(data));
     ondragover="allowDrop(event)"></area>
     <br>
     <img id="drag1" src= "queen.png"true
-    ondragstart="drag(event)" width="50" height="50">
-
+    ondragstart="drag(event)" width="60" height="60">
 <style>
 
         #div1 {
@@ -347,21 +349,39 @@ ev.target. appendChild(document.getElementById(data));
     ev.target. appendChild(document.getElementById(data));
     }
         </script>
+<style>
 
-        <div id="div1" ondrop="drop(event)"
-        ondragover="allowDrop(event)"></area>
-        <br>
-        <img id="drag1" src= "king.png" draggable="true"
-        ondragstart="drag(event)" width="50" height="50">
+div.a {
+    position: absolute;
+    left: 52px;
+    bottom:781px ;
+    right:px ;
+    width:600px;
+    height: 600px;
+    border: 1px solid black;
+}
+
+</style>
+<body>
+    <div class="a">
+        <div class="b">
+        </div>
+    </div>
+</body>
+
+
+
+
+
 
         <script>
-    function mapmaker4(){
+    function mapmaker(){
     var m = document.getElementById("boardgame"),
     sqrSize = 85, 
     offset = 5
     yEnd = 260,
-    yStart = 0,
-    xxStart = 0, 
+    yStart = 1,
+    xxStart = 1, 
     xEnd = 851;
     var i = 0
     
