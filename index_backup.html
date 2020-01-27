@@ -33,39 +33,8 @@
     <img class="imgsize" src = "pawn.png" alt= "Black pawn" id="pawn" class= "player">
     <img class="imgsize" src ="bishop.png" alt= "Black bishop" id="bishop" class= "player">
     -->
-    <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new.png" alt="BLACK_PAWN" id="pawn" class= "player" style="width:26px;height:54px;">
-    <img src="assets/rook.png" alt="BLACK_ROOK" id="rook" class= "player" style="width:1;height:54px;">
-    <img src="assets/knight.png" alt="BLACK_KNIGHT" id="knight" class= "player" style="width:1;height:54px;">
-    <img src="assets/bishop.png" alt="BLACK_BISHOP" id="bishop" class= "player" style="width:1;height:54px;">
-    <img src="assets/bishop.png" alt="BLACK_BISHOP" id="bishop" class= "player" style="width:1;height:54px;">
-    <img src="assets/knight.png" alt="BLACK_KNIGHT" id="knight" class= "player" style="width:1;height:54px;">
-    <img src="assets/rook.png" alt="BLACK_ROOK" id="rook" class= "player" style="width:1;height:54px;">
-    <img src="assets/queen.png" alt="BLACK_QUEEN" id="queen" class= "player" style="width:1;height:54px;">
-    <img src="assets/king.png" alt="BLACK_KING" id="king" class= "player" style="width:1;height:54px;">
-    <p></p>
-    <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
-    <img src="assets/pawn_new_w.png" alt="WHITE_PAWN" id="pawnw" class= "player" style="width:26px;height:54px;">
-    <img src="assets/rook_w.png" alt="WHITE_ROOK" id="rookw" class= "player" style="width:1;height:54px;">
-    <img src="assets/knight_w.png" alt="WHITE_KNIGHT" id="knightw" class= "player" style="width:1;height:54px;">
-    <img src="assets/bishop_w.png" alt="WHITE_BISHOP" id="bishopw" class= "player" style="width:1;height:54px;">
-    <img src="assets/bishop_w.png" alt="WHITE_BISHOP" id="bishopw" class= "player" style="width:1;height:54px;">
-    <img src="assets/knight_w.png" alt="WHITE_KNIGHT" id="knightw" class= "player" style="width:1;height:54px;">
-    <img src="assets/rook_w.png" alt="WHITE_ROOK" id="rookw" class= "player" style="width:1;height:54px;">
-    <img src="assets/queen_w.png" alt="WHITE_QUEEN" id="queenw" class= "player" style="width:1;height:54px;">
-    <img src="assets/king_w.png" alt="WHITE_KING" id="kingw" class= "player" style="width:1;height:54px;">
+    <!-- One question: You want to define 'player' in CSS, right? That is probably not right here -->
+    
     <p></p>
     <div id="board">
         <canvas id="chessboard" width="500" height="500" style="border:2px solid #662b00;">
@@ -111,7 +80,7 @@
         margin-block-start: 1px;
         margin-right:100px;
         padding: 1px;
-        border: 1px solid #aaaaaa;
+        /*border: 1px solid #aaaaaa;*/
     }
 
 
@@ -269,8 +238,8 @@
         
         // Shows the info of the site
         function about() {
-            //alert("Chess N' Dices\n(Version 0.6.5 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.\n\nCreated and edited using Visual Studio Code.\n© 2019-2020 Microsoft Corporation. All rights reserved.")
-            alert("Chess N' Dices\n(Version 0.6.5 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.");
+            //alert("Chess N' Dices\n(Version 0.7.0 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.\n\nCreated and edited using Visual Studio Code.\n© 2019-2020 Microsoft Corporation. All rights reserved.")
+            alert("Chess N' Dices\n(Version 0.7.0 Beta)\n\nCreated and coded by GitHub users JohnChaCoder and PH03N1X015.");
         }
         </script>
     
@@ -278,9 +247,9 @@
         
         <p></p>
         <!--
-        <h5 class="copyright">Version v0.6.5 Beta<br>© 2019-2020. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
+        <h5 class="copyright">Version v0.7.0 Beta<br>© 2019-2020. All rights reserved.<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
         -->
-        <h5 class="copyright">Version v0.6.5 Beta<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
+        <h5 class="copyright">Version v0.7.0 Beta<br><br>Code powered by JavaScript, with elements from HTML5.<br>Some of the features of this site may not work in some versions of Internet Explorer or other older browsers.</h5>
     <p></p>
 
 
@@ -291,13 +260,16 @@
     }
 #space-1 {
     position:absolute;
-    top:0px;
-    left:0px;
+    top:5px;
+    left:24px;
 
 }
+
 </style>
 
-
+<div>
+  
+</div>
 
 
 
@@ -319,19 +291,48 @@ ev.target. appendChild(document.getElementById(data));
     <div id="div1" ondrop="drop(event)"
     ondragover="allowDrop(event)"></area>
     <br>
-    <img id="drag1" src= "queen.png"true
+    <img id="drag1" src= "rook.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "assets/knight.png"true
     ondragstart="drag(event)" width="50" height="50">
-
+    <img id="drag1" src= "bishop.png"true
+    ondragstart="drag(event)" width="60" height="60">
+      <img id="drag1" src= "queen.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "king.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "assets/knight.png"true
+    ondragstart="drag(event)" width="50" height="50">
+  <img id="drag1" src= "bishop.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "rook.png"true
+    ondragstart="drag(event)" width="60" height="60">
+  <img id="drag1" src= "pawn.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "pawn.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "pawn.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "pawn.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "pawn.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "pawn.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "pawn.png"true
+    ondragstart="drag(event)" width="60" height="60">
+    <img id="drag1" src= "pawn.png"true
+    ondragstart="drag(event)" width="60" height="60">
 <style>
 
         #div1 {
-            position: relative;
-            width:45px;
-            height:45px;
-            margin-block-start: 10px;
-            margin-top:100px;
+            position: absolute;
+            width:500px;
+            height:500px;
+            margin-block-start: 60px;
+            margin-bottom:20px;
             padding: 10px;
-            border: 1px solid #aaaaaa;
+            /*border: 1px solid #aaaaaa;*/
         }
         </style>
         <script>
@@ -347,21 +348,39 @@ ev.target. appendChild(document.getElementById(data));
     ev.target. appendChild(document.getElementById(data));
     }
         </script>
+<style>
 
-        <div id="div1" ondrop="drop(event)"
-        ondragover="allowDrop(event)"></area>
-        <br>
-        <img id="drag1" src= "king.png" draggable="true"
-        ondragstart="drag(event)" width="50" height="50">
+div.a {
+    position: relative;
+    left: 50px;
+    bottom:100px ;
+    right:1000px ;
+    width:500px;
+    height: 500px;
+    /*border: 1px solid black;*/
+}
+
+</style>
+<body>
+    <div class="a">
+        <div class="b">
+        </div>
+    </div>
+</body>
+
+
+
+
+
 
         <script>
-    function mapmaker4(){
+    function mapmaker(){
     var m = document.getElementById("boardgame"),
     sqrSize = 85, 
     offset = 5
     yEnd = 260,
-    yStart = 0,
-    xxStart = 0, 
+    yStart = 1,
+    xxStart = 1, 
     xEnd = 851;
     var i = 0
     
